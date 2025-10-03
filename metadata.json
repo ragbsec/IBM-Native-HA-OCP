@@ -1,0 +1,5 @@
+{
+  "name": " IBM MQ Native HA Config Wizard",
+  "description": "A web-based wizard to generate deployment configurations for an IBM MQ Native HA Queue Manager on OpenShift CRC, complete with TLS protection and a sample queue.",
+  "requestFramePermissions": []
+}
