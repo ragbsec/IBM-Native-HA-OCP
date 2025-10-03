@@ -9,6 +9,9 @@ import Step2Configuration from './components/Step2_Configuration';
 import Step3Tls from './components/Step3_TLS';
 import Step4Generate from './components/Step4_Generate';
 
+// This application is a self-contained wizard for generating IBM MQ configuration files.
+// It runs entirely in the browser and does not have any external API dependencies, such as the Gemini API.
+
 const TOTAL_STEPS = 4;
 
 const initialConfig: MQConfig = {
