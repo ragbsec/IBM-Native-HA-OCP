@@ -1,20 +1,42 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# IBM MQ Native HA Config Wizard
 
-# Run and deploy your AI Studio app
+A web-based wizard to generate deployment configurations for an IBM MQ Native HA Queue Manager on OpenShift, complete with TLS protection and a sample queue.
 
-This contains everything you need to run your app locally.
+This project is a standalone, client-side application built with React. It runs entirely in the browser and has no server-side components or external API dependencies.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1mZWVafXIS4UQnNALmIpqbS3OBhINlb06
+## Features
 
-## Run Locally
+-   **Step-by-Step Wizard:** Guides users through the configuration process.
+-   **Configuration Options:** Customize Queue Manager name, namespace, storage, license, and more.
+-   **Automatic TLS Generation:** Generates a self-signed CA and server certificates for MQ client communication and Native HA replication.
+-   **YAML & Script Generation:** Produces Kubernetes YAML for deployment, verification shell commands, and a sample client CCDT file.
+-   **Downloadable Artifacts:** Easily download all generated configuration files and certificates.
 
-**Prerequisites:**  Node.js
+## Running Locally
 
+This project is designed to be run from a simple static file server, as all dependencies are loaded from a CDN via an import map.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+1.  **Prerequisites:**
+    *   A modern web browser.
+    *   A local web server. You can use any simple server, for example, Python's built-in server or the `http-server` package from npm.
+
+2.  **Serve the Project Files:**
+    *   Navigate to the project's root directory in your terminal.
+    *   **Using Python:**
+        ```bash
+        # For Python 3
+        python3 -m http.server
+        ```
+    *   **Using Node.js:**
+        ```bash
+        # Install http-server globally if you haven't already
+        # npm install -g http-server
+        
+        # Or run it directly with npx
+        npx http-server
+        ```
+
+3.  **Access the Application:**
+    *   Open your web browser and navigate to the address provided by the local server (usually `http://localhost:8000` or `http://localhost:8080`).
+
+The application should now be running in your browser.
